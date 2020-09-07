@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(45deg,red,yellow,green,blue,#787878,#fff,orange,pink,rgba(0, 0, 0, 0.521));
+}
+#clock {
+    width: 40%;
+    height: 40vw;
+    display: flex;
+    background:url("clock.png") no-repeat;
+    background-size: 100%;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #000; */
+} 
+#clock::before {
+    content: "";
+    position: absolute;
+    width: 1.2%;
+    height: 1.2vw;
+    background: red;
+    border-radius: 50%;
+    z-index: 14;
+}
+#clock::after {
+    content: "";
+    position: absolute;
+    width:  3%;
+    height: 3vw;
+    background: #000;
+    border-radius: 50%;
+    z-index: 10;
+}
+#h,#m,#s {
+    position: absolute;
+}
+#h {
+    width: 1.5%;
+    height: 20vw;
+    /* background: #787878; */
+    display: flex;
+
+}
+
+#hour{
+    width: 100%;
+    height: 50%;
+    background: #000;
+    border-radius: 10px;
+    position: absolute;
+    /* top: 25.2%;
+    left: 48.86%; */
+    /* display: none; */
+    transform-origin: 50% 100%;
+    z-index: 10;
+
+}
+#m {
+    width: 0.8%;
+    height: 24vw;
+    /* background: red; */
+    display: flex;
+}
+
+#minute {
+    width: 100%;
+    height: 50%;
+    background: #3498db;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 11;
+    /* display: none; */
+    transform-origin: 50% 100%;
+}
+#s {
+    width: 0.4%;
+    height: 28vw;
+    /* background: orangered; */
+    display: flex;
+
+}
+#sec {
+    width: 100%;
+    height: 50%;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    z-index:14;
+    transform-origin: 50% 100%;
+    /* display: none; */
+}
+footer {
+    margin-top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    
+}
+footer details summary{
+    outline: none;
+}
+@media screen and (max-width:600px) {
+    #clock {
+        width: 80%;
+        height: 80vw;
+    }
+    #h {
+        width: 2%;
+        height: 38vw;
+    }
+    #m {
+        width: 1.2%;
+        height: 48vw;
+    }
+    #s {
+        width: 0.8%;
+        height: 55vw;
+    }
+    #clock::before {
+        width: 1.2%;
+        height: 1.2vw;
+    }
+    #clock::after {
+        width:  5.8%;
+        height: 5.8vw;
+    }
+}
+@media screen and (max-width:400px) {
+    #clock {
+        width: 90%;
+        height: 90vw;
+    }
+    #h {
+        width: 2.2%;
+        height: 42vw;
+    }
+    #m {
+        width: 1.4%;
+        height: 52vw;
+    }
+    #s {
+        width: 1%;
+        height: 60vw;
+    }
+    footer {
+        font-size: 16px;
+    }
+}
+
